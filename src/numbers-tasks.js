@@ -322,10 +322,16 @@ function getSumToN(n) {
  *   202 => 4  // (2+0+2)
  *   5   => 5  // 5
  */
-function getSumOfDigits(/* num */) {
-  throw new Error('Not implemented');
+function getSumOfDigits(num) {
+  const numString = num.toString();
+  const digits = numString.split('').map((digit) => {
+    return Number(digit);
+  });
+  const sumOfDigits = digits.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+  }, 0);
+  return sumOfDigits;
 }
-
 /**
  * Returns true if the given number is a power of two, false otherwise.
  *
