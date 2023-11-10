@@ -498,10 +498,12 @@ function getFloatOnString(str) {
  * '1.234', 2           => 1
  * '10', 8              => 8
  */
-function getIntegerOnString(/* str, base */) {
-  throw new Error('Not implemented');
+// let str = '4.567abcdefgh';
+// let base = 10;
+function getIntegerOnString(str, base) {
+  return Number.parseInt(str, base);
 }
-
+// console.log(getIntegerOnString(str, base))
 /**
  * Returns whether a number is a safe integer.
  *
